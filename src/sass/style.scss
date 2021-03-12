@@ -31,7 +31,7 @@ h3 {
     font-family: $brand-font;
     font-size: 14px;
 
-    a {
+    ul a {
       display: block;
       padding: 10px;
       width: 100%;
@@ -50,6 +50,10 @@ h3 {
           margin: 0 10px;
        }
     }
+  }
+
+  .nav-bar-copy { 
+    display: none;
   }
 
   .logo {
@@ -304,7 +308,7 @@ main .page {
 }
 
 .add-button { 
-    margin: 20px 500px 20px;
+    margin: 20px auto;
     font-family: $brand-font;
     text-decoration: none;
     color: white;
@@ -338,8 +342,12 @@ main .page {
 
 
 .earnings-pic {
-  margin: 30px 0 0 300px;
+  max-width: 500px;
+  margin: 0 auto;
 
+  img { 
+    width: 100%;
+  }
 }
 
 
@@ -401,3 +409,33 @@ td {
   }
 }    
 
+
+@media (
+  max-width: 768px
+) 
+{
+.sidebar:not(.active) {
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.nav-bar-copy {
+  display: block;
+}
+
+.nav-bar {
+  display: none;
+
+}
+
+.table-links {
+  overflow-x: scroll;
+}
+
+main {
+  margin-left: 0;
+  padding: 0;
+  width: 100%;
+}
+}
